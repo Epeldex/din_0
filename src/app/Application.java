@@ -18,12 +18,7 @@ import interfaces.View;
 public class Application {
    
     public static void main(String[] args){
-        
-       View view =  ViewFactory.getView("Text");
-       Model model = ModelFactory.getModel("BD");
-       
-       new Controller().run(view, model);
-
+       new Controller().run(ViewFactory.getView("Text"), ModelFactory.getModel("BD"));
     }
     
 }

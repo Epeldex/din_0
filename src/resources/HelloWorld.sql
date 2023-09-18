@@ -1,4 +1,5 @@
-create database helloworld;
+drop database if exists helloworld;
+create database if not exists helloworld;
 use helloworld;
 
 create table greeting (
@@ -8,3 +9,4 @@ create table greeting (
 
 insert into greeting(hello) values("Hello World");
 
+SELECT * from greeting

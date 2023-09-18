@@ -24,8 +24,7 @@ public class Controller {
      */
     public void run(View view, Model model){
         try {
-            String greeting = model.getGreeting();
-            view.showGreeting(greeting);
+            view.showGreeting(model.getGreeting());
         } catch (Exception ex) {
             
         }
