@@ -9,3 +9,4 @@ create table greeting (
 
 insert into greeting(hello) values("Hello World");
 
+SELECT * from greeting

@@ -17,7 +17,7 @@ public class ViewFactory {
         View view = null;
         switch (type) {
             case "JavaFx":
-               // view = new view.JavaFxImplementation();
+                view = new view.JavaFxImplementation();
                 break;
             case "Text":
                 view = new view.TextViewImplementation();
