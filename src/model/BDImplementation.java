@@ -5,7 +5,6 @@
  */
 package model;
 
-import exceptions.MyException;
 import interfaces.Model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -26,11 +25,11 @@ public class BDImplementation implements Model {
     
     /**
      * Este método abre la conexión con la base de datos, recoge todo el contenido de la tabla greeting, y lo guarda en un objeto String 
-     * @return
-     * @throws MyException 
+     * @return greeting String con el mensaje recogido
+     * @throws Exception si hay un error con la base de datos
      */
     @Override
-    public String getGreeting() throws MyException {
+    public String getGreeting() throws Exception {
         String greeting = new String();
         con = connection.openConnection();
         String query = "SELECT * from greeting";
@@ -42,9 +41,7 @@ public class BDImplementation implements Model {
             greeting = rs.getString("hello");              
             connection.closeConnection(stmt, con);
         } catch (SQLException ex) {
-            String error = "Error connecting to the database"; // Define the error message.
-            MyException er = new MyException(error); // Create a new exception with the error message.
-            throw er; // Throw the exception.
+            throw new Exception(ex.getMessage());
         }
         return greeting;
     }

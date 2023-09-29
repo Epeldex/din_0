@@ -14,6 +14,7 @@ public interface Model {
  * Este método recoge el greeting de la implementación
  * @author Jagoba
  * @return devuelve un dato String
+ * @throws Exception si hay un error
  */
     public String getGreeting() throws Exception;
 }

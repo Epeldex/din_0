@@ -6,13 +6,21 @@
 package interfaces;
 
 /**
- * Esta interfaz define el método showGreeting() que va a ser llamado por ConsoleImplementation y JavaFxImplentation
+ * Esta interfaz define el método showGreeting() que va a ser llamado por
+ * ConsoleImplementation y JavaFxImplentation
+ *
  * @author alexIrusta
  */
 public interface View {
+
     /**
- * Este método muestra un greeting que se le pasa como argumento
- * @author alexIrusta
- */
-   public  void showGreeting(String greeting) throws Exception;
+     * Este método muestra un greeting que se le pasa como argumento
+     *
+     * @author alexIrusta
+     * @param greeting String con el mensaje a mostrar
+     * @throws Exception Excepcion si hay un error
+     */
+    public void showGreeting(String greeting) throws Exception;
+
+    public void showError(String error);
 }

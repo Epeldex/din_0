@@ -8,14 +8,20 @@ package view;
 import interfaces.View;
 
 /**
- *Esta clase se encarga de recoger el saludo y mostrarlo por terminal
+ * Esta clase se encarga de recoger el saludo y mostrarlo por terminal
+ *
  * @author Alex E
  */
 public class TextViewImplementation implements View {
 
     @Override
-    public void showGreeting(String greeting) throws Exception{
+    public void showGreeting(String greeting) throws Exception {
         System.out.println(greeting);
     }
-    
+
+    @Override
+    public void showError(String error) {
+        System.out.println(error);
+    }
+
 }

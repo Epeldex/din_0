@@ -19,14 +19,14 @@ public class Controller {
     /**
      *Este metodo se encarge de recoger el mensaje del modelo y pasarselo a la vista 
      * 
-     * @param view
-     * @param model 
+     * @param view instancia de la implementacion de la vista
+     * @param model  instancia de la implementacion del model
      */
     public void run(View view, Model model){
         try {
             view.showGreeting(model.getGreeting());
         } catch (Exception ex) {
-            
+            view.showError(ex.getMessage());
         }
     }
     
