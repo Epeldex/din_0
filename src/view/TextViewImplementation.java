@@ -19,9 +19,5 @@ public class TextViewImplementation implements View {
         System.out.println(greeting);
     }
 
-    @Override
-    public void showError(String error) {
-        System.out.println(error);
-    }
 
 }

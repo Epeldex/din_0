@@ -29,6 +29,6 @@ public class BDImplementationTest {
     @Test()
     public void testGetGreeting() throws Exception {
         BDImplementation bd = new BDImplementation();
-        assertEquals("Error", "Hello World!", bd.getGreeting());
+        assertEquals("Error", "Hello Jago!", bd.getGreeting());
     }
 }

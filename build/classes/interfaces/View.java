@@ -21,6 +21,4 @@ public interface View {
      * @throws Exception Excepcion si hay un error
      */
     public void showGreeting(String greeting) throws Exception;
-
-    public void showError(String error);
 }

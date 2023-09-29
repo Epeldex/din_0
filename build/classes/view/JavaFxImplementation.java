@@ -24,7 +24,7 @@ import javafx.stage.Stage;
  * @author alexIrusta
  */
 public class JavaFxImplementation extends javafx.application.Application implements View, Initializable {
-
+   
     private static String greeting;
     private static String error;
 
@@ -44,14 +44,9 @@ public class JavaFxImplementation extends javafx.application.Application impleme
         FXMLLoader loader = new FXMLLoader(getClass().getResource("WelcomeView.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
-
-        JavaFxImplementation controller = loader.getController();
         
-        if (!error.equals(null))
-                controller.textArea.setText(error);
-
-        if (!greeting.equals(null)) 
-            controller.textArea.setText(greeting);
+        JavaFxImplementation controller = loader.getController();
+        controller.textArea.setText(greeting);
         
         stage.setScene(scene);
         stage.show();
@@ -71,10 +66,6 @@ public class JavaFxImplementation extends javafx.application.Application impleme
         launch();
     }
 
-    public void showError(String error) {
-        this.error = error;
-        launch();
-    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

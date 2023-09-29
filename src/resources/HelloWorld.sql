@@ -7,6 +7,6 @@ create table greeting (
     primary key(hello)
 );
 
-insert into greeting(hello) values("Hello World!");
+insert into greeting(hello) values("Hello Jago!");
 
 SELECT * from greeting
